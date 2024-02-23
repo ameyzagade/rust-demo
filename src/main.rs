@@ -1,7 +1,11 @@
 fn main() {
     println!("Hello, world!");
 
-    about_variables();
+    //about_variables();
+    
+    // Invocation: <fn-name>(args)
+    let my_val = my_test_function(21);
+    println!("My value: {}", my_val);
 }
 
 fn about_variables()
@@ -16,7 +20,7 @@ fn about_variables()
 
     // explicit type declaration
     let bunnies: i32 = 2;
-    let (radius, diameter): (f32, i32) = (3.14, 40);    // tuple destructuring
+    let (mut radius, diameter): (f32, i32) = (3.14, 40);    // tuple destructuring
     println!("{},{}, {}", bunnies, radius, diameter);
 
     // const declaration
@@ -47,4 +51,15 @@ fn about_variables()
     // another shadowing example
     let meme = 12;          // initialized as integer
     let meme = "12";        // OK, set as string
+}
+
+// Declaration: fn <name-snake-case>(<param-name1>: <type>, <param-name2>: <type>) -> <ret-type>
+// can appear in no particular order in the file
+// no named args at call-site
+// no variable arguments to function
+fn my_test_function(qty: i32) -> i32
+{
+    println!("{}", qty);
+
+    return qty * 2; // simply qty * 2; tail expression
 }
