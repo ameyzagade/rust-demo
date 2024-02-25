@@ -1,3 +1,8 @@
+// importing functions from another library
+// Syntax: use <project-name>::<function-name>
+// project name as defined in the toml file
+use demo::greet; 
+
 fn main() {
     println!("Hello, world!");
 
@@ -6,6 +11,10 @@ fn main() {
     // Invocation: <fn-name>(args)
     let my_val = my_test_function(21);
     println!("My value: {}", my_val);
+
+    // invoking method from another library in the same project
+    greet();
+    // OR using scope operator: rust-demo::greet();
 }
 
 fn about_variables()
@@ -61,5 +70,5 @@ fn my_test_function(qty: i32) -> i32
 {
     println!("{}", qty);
 
-    return qty * 2; // simply qty * 2; tail expression
+    return qty * 2; // OR simply qty * 2; tail expression
 }

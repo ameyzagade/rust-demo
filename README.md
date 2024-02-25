@@ -9,6 +9,7 @@
 #### Compiler: rustc
 #### Compilation time higher, lot of checks during compile time
 #### Compiled binary location: target/[release/debug] directory
+#### Execution starts: fn main() inside main.rs file of project
 
 ### Cargo
 #### Cargo is a
